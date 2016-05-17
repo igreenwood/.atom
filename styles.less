@@ -1,0 +1,152 @@
+@font-size-base: 9pt;
+@font-size-small: 7.5pt;
+@font-size-large: 12pt;
+@font-color-muted: rgba(156, 164, 180, 0.5);
+
+body, html {
+  font-style: normal !important;
+  font-size: @font-size-base;
+}
+
+.tree-view {
+  @tree-view-font-size: @font-size-small;
+
+  opacity: 0.8;
+
+  &:focus {
+    opacity: 1;
+  }
+
+  .header {
+    font-size: @tree-view-font-size;
+  }
+
+  .header.list-item,
+  .entries.list-tree li {
+    font-size: @tree-view-font-size;
+
+    span.icon:before {
+      font-size: @tree-view-font-size;
+      margin-right: 1px;
+    }
+
+    .list-item:before {
+      margin-right: 0;
+    }
+
+    li.status-ignored * {
+      color: @font-color-muted !important;
+    }
+  }
+}
+
+.vertical {
+  .pane {
+    padding: 0;
+
+    // 非アクティブウィンドウの色を変える
+    &:not(.active) {
+      opacity: 0.6;
+    }
+
+    // タブの高さが高すぎるので低くする
+    .list-inline.tab-bar {
+      @tab-font-size: @font-size-base * 0.9;
+      @tab-height: @tab-font-size * 2.5;
+
+      height: @tab-height;
+      line-height: @tab-height;
+      padding: 0;
+
+      &:after {
+        top: @tab-height;
+      }
+
+      .tab, .tab.active {
+        top: 0px;
+        max-width: 12%;
+
+        &:before,
+        &:after {
+          transform: none;
+          border-radius: 0;
+        }
+
+        &.modified:not(:hover) .close-icon {
+          top: 0;
+          height: @tab-height / 2;
+          width: @tab-height;
+        }
+
+        &:before, .title, .close-icon {
+          height: @tab-height;
+          line-height: @tab-height;
+          font-size: @tab-font-size;
+          cursor: pointer;
+          text-align: left;
+        }
+
+        .title:before {
+          line-height: @tab-height;
+          font-size: @tab-font-size;
+        }
+
+        .close-icon:hover {
+          color: #f88;
+        }
+      }
+    }
+  }
+
+  .bottom,
+  .status-bar {
+    font-size: @font-size-small;
+  }
+}
+
+.autocomplete-plus * {
+  font-size: 100%;
+}
+
+.modal {
+  font-size: @font-size-small;
+
+  &.overlay:after {
+    background: rgba(11, 12, 14, 0.4);
+  }
+}
+
+.tooltip {
+  @tooltip-background-color: rgba(30, 30, 30, 0.8);
+  @tooltip-font-color: rgba(255, 255, 255, 0.8);
+
+  .tooltip-inner {
+    background: @tooltip-background-color !important;
+    color: @tooltip-font-color !important;
+    font-size: @font-size-base !important;
+  }
+
+  .tooltip-arrow {
+    border-bottom-color: @tooltip-background-color !important;
+  }
+}
+
+.theme-atom-dark-syntax atom-text-editor,
+.theme-one-dark-syntax atom-text-editor {
+  background: #15151a !important;
+
+  &::shadow {
+    [gutter-name="line-number"] {
+      color: #555;
+      background: #15151a;
+
+      .line-number {
+        &.cursor-line {
+          color: #aaa !important;
+          background: rgba(255, 255, 255, 0.05);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

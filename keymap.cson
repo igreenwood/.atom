@@ -1,0 +1,8 @@
+'body':
+  'cmd-ctrl-[': 'window:focus-next-pane'
+  'cmd-ctrl-]': 'window:focus-previous-pane'
+  'cmd-ctrl-left': 'pane:split-left'
+  'cmd-ctrl-right': 'pane:split-right'
+'atom-text-editor':
+  'ctrl-up': 'line-jumper:move-up'
+  'ctrl-down': 'line-jumper:move-down'

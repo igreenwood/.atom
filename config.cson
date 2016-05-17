@@ -1,0 +1,60 @@
+"*":
+  "autocomplete-plus": {}
+  "autocomplete-ruby": {}
+  autosave:
+    enabled: true
+  core:
+    audioBeep: false
+    closeEmptyWindows: false
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "wrap-guide"
+      "language-coffee-script-angular"
+      "atom-rails"
+      "language-dockerfile"
+      "language-csharp"
+      "language-gfm"
+      "language-mustache"
+      "language-objective-c"
+    ]
+    excludeVcsIgnoredPaths: false
+    themes: [
+      "one-dark-ui"
+      "atom-dark-syntax"
+    ]
+  editor:
+    fontFamily: "Source Han Code JP"
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "0fa65452-ab8a-887e-4955-e61322568440"
+  "find-and-replace":
+    openProjectFindResultsInRightPane: true
+  "fuzzy-finder": {}
+  "git-plus": {}
+  "line-jumper": {}
+  "markdown-preview":
+    useGitHubStyle: true
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "minimap-autohide": true
+      "minimap-autohideDecorationsZIndex": 0
+  "one-dark-ui": {}
+  react: {}
+  "tool-bar":
+    iconSize: "16px"
+    position: "Left"
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
+  whitespace: {}
